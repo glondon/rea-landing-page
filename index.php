@@ -60,9 +60,12 @@ include 'config.php';
 			<fieldset>
 				<div class="col-xs-10">
 					<ul id="formError"></ul>
-					<input type="text" name="name" id="nameInput" class="form-control" /><br />
-					<input type="text" name="email" id="emailInput" class="form-control" /><br />
-					<input type="text" name="phone" id="phoneInput" class="form-control" /><br />
+					<input type="text" name="name" id="nameInput" class="form-control" value="Name" onfocus="if (this.value == 'Name') this.value = '';" 
+						onblur="if (this.value == '') this.value = 'Name';" /><br />
+					<input type="text" name="email" id="emailInput" class="form-control" value="Email" onfocus="if (this.value == 'Email') this.value = '';" 
+						onblur="if (this.value == '') this.value = 'Email';" /><br />
+					<input type="text" name="phone" id="phoneInput" class="form-control" value="Phone" onfocus="if (this.value == 'Phone') this.value = '';" 
+						onblur="if (this.value == '') this.value = 'Phone';" /><br />
 					<button type="submit" id="formSubmit" class="btn btn-default btn-sm">Sign Up</button>
 				</div>
 			</fieldset>
