@@ -25,7 +25,8 @@ include 'config.php';
 	<style>
 		.container {padding:50px}
 		#nameInput, #emailInput, #phoneInput, #formSubmit {padding:10px;margin:3px}
-		#formError {width:300px;list-style:none;display:none}
+		#formError {width:400px;list-style:none;display:none}
+		#formResponse {width:400px}
 	</style>
 </head>
 <body>
@@ -86,7 +87,7 @@ include 'config.php';
 				else
 				{
 					$('#formError').fadeIn('slow');
-					
+
 					if(data.nameError != null)
 						$('#formError').append('<li>'+data.nameError+'</li>');
 

@@ -38,7 +38,7 @@ if(!empty($_POST)){
 	else
 		$errors['phone'] = null;
 
-	if(!empty($errors)){
+	if(!is_null($errors['name']) || !is_null($errors['email']) || !is_null($errors['phone'])){
 
 		$response['success'] = false;
 		$response['nameError'] = $errors['name'];
