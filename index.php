@@ -10,13 +10,17 @@ include 'config.php';
 
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="<?php echo $description ?>">
 	<meta name="author" content="Greg London">
-	<title><?php echo $title ?></title>
-
+	<title><?= $title ?></title>
+	<meta name="description" content="<?= $description ?>">
+	<meta name="keywords" content="<?= $keywords ?>" />
+	<link rel="canonical" href="<?= URL ?>" />
+	<link href="<?= URL ?>css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?= URL ?>css/bootstrap-responsive.min.css" rel="stylesheet">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="><?= URL ?>js/bootstrap.min.js"></script>
 
 	<style>
 		
