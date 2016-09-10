@@ -50,7 +50,8 @@ if(!empty($_POST)){
 	else {
 
 		$response['success'] = true;
-		$response['message'] = $adminName . ' will be in contact with you shortly '.$name.'!<script>$("#submitForm").hide(2000)</script>';
+		$response['message'] = '<div class="alert alert-success">' .$adminName .' will be in contact with you shortly '
+			.$name.'!</div><script>$("#submitForm").hide(2000)</script>';
 
 		echo json_encode($response);
 

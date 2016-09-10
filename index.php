@@ -25,6 +25,7 @@ include 'config.php';
 	<style>
 		.container {padding:50px}
 		#nameInput, #emailInput, #phoneInput, #formSubmit {padding:10px;margin:3px}
+		#formError {width:300px;list-style:none;display:none}
 	</style>
 </head>
 <body>
@@ -59,7 +60,7 @@ include 'config.php';
 		<form class="form-horizontal" action="<?=URL?>submit.php" method="post" id="submitForm" accept-charset="utf-8">
 			<fieldset>
 				<div class="col-xs-10">
-					<ul id="formError"></ul>
+					<ul id="formError" class="alert alert-danger"></ul>
 					<input type="text" name="name" id="nameInput" class="form-control" value="Name" onfocus="if (this.value == 'Name') this.value = '';" 
 						onblur="if (this.value == '') this.value = 'Name';" /><br />
 					<input type="text" name="email" id="emailInput" class="form-control" value="Email" onfocus="if (this.value == 'Email') this.value = '';" 
@@ -75,6 +76,7 @@ include 'config.php';
 	<script type="text/javascript">
 		$('form#submitForm #formSubmit').click(function(form){
 			form.preventDefault();
+			$('#formError').hide();
 			$('#formError').empty();
 			var baseUrl = document.location.origin;
 
@@ -83,6 +85,8 @@ include 'config.php';
 					$('#formResponse').html(data.message);
 				else
 				{
+					$('#formError').fadeIn('slow');
+					
 					if(data.nameError != null)
 						$('#formError').append('<li>'+data.nameError+'</li>');
 
