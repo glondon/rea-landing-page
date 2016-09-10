@@ -23,11 +23,10 @@ include 'config.php';
 	<script src="<?=URL?>js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?=URL?>js/facebook.js"></script>
 	<style>
-		.container {padding:50px}
 		#nameInput, #emailInput, #phoneInput, #formSubmit {padding:10px;margin:3px}
 		#formError {width:400px;list-style:none;display:none}
 		#formResponse {width:400px}
-		.youtube {padding:30px}
+		#youtube {margin:30px,30px;padding-bottom:15px}
 	</style>
 </head>
 <body>
@@ -58,25 +57,27 @@ include 'config.php';
 			<h1>Interested in buying a home in Virginia Beach?</h1>
 		</div>
 		<div class="row">
-			<h2>Call: <a href="tel:<?=$adminPhone?>"><?=$adminPhone?></a></h2>
-			<div class="youtube">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/7U8yqRGP7ak" frameborder="0" allowfullscreen></iframe>
+			<div class="col-md-8">
+				<h2>Call: <a href="tel:<?=$adminPhone?>"><?=$adminPhone?></a></h2>
+				<div id="youtube" class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7U8yqRGP7ak" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div id="formResponse"></div>
+				<form class="form-horizontal" action="<?=URL?>submit.php" method="post" id="submitForm" accept-charset="utf-8">
+					<fieldset>
+						<div class="col-xs-10">
+							<ul id="formError" class="alert alert-danger"></ul>
+							<input type="text" name="name" id="nameInput" class="form-control" value="Name" onfocus="if (this.value == 'Name') this.value = '';" 
+								onblur="if (this.value == '') this.value = 'Name';" /><br />
+							<input type="text" name="email" id="emailInput" class="form-control" value="Email" onfocus="if (this.value == 'Email') this.value = '';" 
+								onblur="if (this.value == '') this.value = 'Email';" /><br />
+							<input type="text" name="phone" id="phoneInput" class="form-control" value="Phone" onfocus="if (this.value == 'Phone') this.value = '';" 
+								onblur="if (this.value == '') this.value = 'Phone';" /><br />
+							<button type="submit" id="formSubmit" class="btn btn-default btn-sm">Sign Up</button>
+						</div>
+					</fieldset>
+				</form>
 			</div>
-			<div id="formResponse"></div>
-			<form class="form-horizontal" action="<?=URL?>submit.php" method="post" id="submitForm" accept-charset="utf-8">
-				<fieldset>
-					<div class="col-xs-10">
-						<ul id="formError" class="alert alert-danger"></ul>
-						<input type="text" name="name" id="nameInput" class="form-control" value="Name" onfocus="if (this.value == 'Name') this.value = '';" 
-							onblur="if (this.value == '') this.value = 'Name';" /><br />
-						<input type="text" name="email" id="emailInput" class="form-control" value="Email" onfocus="if (this.value == 'Email') this.value = '';" 
-							onblur="if (this.value == '') this.value = 'Email';" /><br />
-						<input type="text" name="phone" id="phoneInput" class="form-control" value="Phone" onfocus="if (this.value == 'Phone') this.value = '';" 
-							onblur="if (this.value == '') this.value = 'Phone';" /><br />
-						<button type="submit" id="formSubmit" class="btn btn-default btn-sm">Sign Up</button>
-					</div>
-				</fieldset>
-			</form>
 		</div>
 	</div>
 	<script type="text/javascript">
