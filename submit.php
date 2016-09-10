@@ -1,1 +1,6 @@
-<?php //handle the ajax request ?>
+<?php
+/*
+* Author: Greg London
+* http://greglondon.info
+*/
+?>
