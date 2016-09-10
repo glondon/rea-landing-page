@@ -59,7 +59,7 @@ include 'config.php';
 			<div class="col-md-8">
 				<h3>Call: <a href="tel:<?=$adminPhone?>"><?=$adminPhone?></a></h3>
 				<div id="youtube">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/7U8yqRGP7ak" frameborder="0" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/<?=$youtubeUrl?>" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<!--
     				<fb:login-button scope="public_profile,email" style="margin:15px" onlogin="checkLoginState();" data-auto-logout-link="true"></fb:login-button>
