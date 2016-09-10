@@ -51,7 +51,12 @@ if(!empty($_POST)){
 
 		$response['success'] = true;
 		$response['message'] = '<div class="alert alert-success">' .$adminName .' will be in contact with you shortly '
-			.$name.'!</div><script>$("#submitForm").hide(2000)</script>';
+			.$name.'!</div><script>
+								$("#submitForm").hide(2000);
+								window.setTimeout(function() {
+				                    window.location.href = "<?=$adminWebsite?>";
+				                }, 3000);
+						   </script>';
 
 		echo json_encode($response);
 
