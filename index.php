@@ -24,8 +24,7 @@ include 'config.php';
 	<script type="text/javascript" src="<?=URL?>js/facebook.js"></script>
 	<style>
 		#nameInput, #emailInput, #phoneInput, #formSubmit {padding:10px;margin:3px}
-		#formError {width:400px;list-style:none;display:none}
-		#formResponse {width:400px}
+		#formError {margin-left:-3px;list-style:none;display:none}
 		#submitForm {padding-top:15px}
 		#youtube {position: relative;padding-bottom: 56.25%;padding-top: 30px; height: 0; overflow: hidden}
  		#youtube iframe,#youtube object,#youtube embed {position: absolute;top: 0;left: 0;width: 100%;height: 100%}
