@@ -55,7 +55,9 @@ include 'config.php';
 	<!-- Facebook  End -->
 
 	<div align="center" class="container">
-		<h1>Buy it now!</h1>
+		<div class="page-header">
+			<h1>Interested in buying a home in Virginia Beach?</h1>
+		</div>
 
 		<div id="formResponse"></div>
 		<form class="form-horizontal" action="<?=URL?>submit.php" method="post" id="submitForm" accept-charset="utf-8">
