@@ -54,9 +54,16 @@ include 'config.php';
 	<div align="center">
 		<h1>Buy it now!</h1>
 
-		<form>
+		<div id="formResponse"></div>
+		<form class="form-horizontal" action="<?=URL?>submit.php" method="post" id="submitForm" accept-charset="utf-8">
 			<fieldset>
-
+				<div class="col-xs-10">
+					<ul id="formError"></ul>
+					<input type="text" name="name" id="nameInput" class="form-control" />
+					<input type="text" name="email" id="emailInput" class="form-control" />
+					<input type="text" name="phone" id="phoneInput" class="form-control" />
+					<button type="submit" id="formSubmit" class="btn btn-default btn-sm">Sign Up</button>
+				</div>
 			</fieldset>
 		</form>
 
