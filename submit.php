@@ -54,8 +54,8 @@ if(!empty($_POST)){
 			.$name.'!</div><script>
 								$("#submitForm").hide(2000);
 								window.setTimeout(function() {
-				                    window.location.href = "<?=$adminWebsite?>";
-				                }, 3000);
+				                    window.location.href = "'.$adminWebsite.'";
+				                }, 5000);
 						   </script>';
 
 		echo json_encode($response);
