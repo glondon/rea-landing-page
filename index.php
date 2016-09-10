@@ -22,7 +22,6 @@ include 'config.php';
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="<?=URL?>js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?=URL?>js/facebook.js"></script>
-
 	<style>
 		.container {padding:50px}
 		#nameInput, #emailInput, #phoneInput, #formSubmit {padding:10px;margin:3px}
@@ -32,7 +31,6 @@ include 'config.php';
 	</style>
 </head>
 <body>
-
 	<!-- Facebook -->
     <script>
       window.fbAsyncInit = function() {
@@ -55,7 +53,6 @@ include 'config.php';
 	<div id="status" style="margin-bottom:10px"></div>
 	-->
 	<!-- Facebook  End -->
-
 	<div align="center" class="container">
 		<div class="page-header">
 			<h1>Interested in buying a home in Virginia Beach?</h1>
@@ -65,7 +62,6 @@ include 'config.php';
 			<div class="youtube">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/7U8yqRGP7ak" frameborder="0" allowfullscreen></iframe>
 			</div>
-
 			<div id="formResponse"></div>
 			<form class="form-horizontal" action="<?=URL?>submit.php" method="post" id="submitForm" accept-charset="utf-8">
 				<fieldset>
@@ -89,7 +85,6 @@ include 'config.php';
 			$('#formError').hide();
 			$('#formError').empty();
 			var baseUrl = document.location.origin;
-
 			$.post(baseUrl + '/submit.php', $('form#submitForm').serialize(), function(data){
 				if(data.success)
 					$('#formResponse').html(data.message);
