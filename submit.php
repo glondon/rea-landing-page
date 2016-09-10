@@ -38,7 +38,58 @@ if(!empty($_POST)){
 	else
 		$errors['phone'] = null;
 
-	
+	if(!empty($errors)){
+
+		$response['success'] = false;
+		$response['nameError'] = $errors['name'];
+		$response['emailError'] = $errors['email'];
+		$response['phoneError'] = $errors['phone'];
+
+		echo json_encode($response);
+	}
+	else {
+
+		$response['success'] = true;
+		$response['message'] = $adminName . ' will be in contact with you shortly '.$name.'!<script>$("#submitForm").hide(2000)</script>';
+
+		echo json_encode($response);
+
+		$data = array('name' => $name, 'email' => $email, 'phone' => $phone);
+
+		//sendAdminEmail($data);
+		//sendUserEmail($data);
+	}
+}
+
+function sendAdminEmail($data)
+{
+	$headers = 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+	$headers .= 'From: Admin <'.$adminEmail.'>' . "\r\n";
+	$toEmail = $adminEmail;
+	$subject = 'You have a new lead processed on: ' . date('Y/m/d');
+	$body = '
+			<p>Lead details are below:</p>
+			<ul>
+				<li>Name: '.$data['name'].'</li>
+				<li>Email: '.$data['email'].'</li>
+				<li>Phone: '.$data['phone'].'</li>
+			</ul>
+			<p>Contact them ASAP!!!</p>';
+
+	mail($toEmail, $subject, $body, $headers);
+}
+
+function sendUserEmail($data)
+{
+	$headers = 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+	$headers .= 'From: Admin <'.$adminEmail.'>' . "\r\n";
+	$toEmail = $data['email'];
+	$subject = 'Thankyou for contacting '.$adminName.' '.$data['name'].'!';
+	$body = '
+			<p>'.$adminName.' will be in contact with you shortly!</p>
+			<p>In the meantime, please search for homes at: '.$adminWebsite.'</p>';
+
+	mail($toEmail, $subject, $body, $headers);
 }
 
 ?>
