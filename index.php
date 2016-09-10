@@ -23,7 +23,8 @@ include 'config.php';
 	<script type="text/javascript" src="<?=URL?>js/facebook.js"></script>
 
 	<style>
-		
+		.container {padding:50px}
+		#nameInput, #emailInput, #phoneInput, #formSubmit {padding:10px;margin:3px}
 	</style>
 </head>
 <body>
@@ -51,7 +52,7 @@ include 'config.php';
 	-->
 	<!-- Facebook  End -->
 
-	<div align="center">
+	<div align="center" class="container">
 		<h1>Buy it now!</h1>
 
 		<div id="formResponse"></div>
@@ -59,9 +60,9 @@ include 'config.php';
 			<fieldset>
 				<div class="col-xs-10">
 					<ul id="formError"></ul>
-					<input type="text" name="name" id="nameInput" class="form-control" />
-					<input type="text" name="email" id="emailInput" class="form-control" />
-					<input type="text" name="phone" id="phoneInput" class="form-control" />
+					<input type="text" name="name" id="nameInput" class="form-control" /><br />
+					<input type="text" name="email" id="emailInput" class="form-control" /><br />
+					<input type="text" name="phone" id="phoneInput" class="form-control" /><br />
 					<button type="submit" id="formSubmit" class="btn btn-default btn-sm">Sign Up</button>
 				</div>
 			</fieldset>
