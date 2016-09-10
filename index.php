@@ -15,6 +15,7 @@ include 'config.php';
 	<meta name="description" content="<?php echo $description ?>">
 	<meta name="author" content="Greg London">
 	<title><?php echo $title ?></title>
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 	<style>
@@ -25,13 +26,17 @@ include 'config.php';
 
 <body>
 
-	<h1>Buy it now!</h1>
+	<div align="center">
 
-	<form>
-		<fieldset>
+		<h1>Buy it now!</h1>
 
-		</fieldset>
-	</form>
+		<form>
+			<fieldset>
+
+			</fieldset>
+		</form>
+
+	</div>
 
 	<script type="text/javascript">
 
