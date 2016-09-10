@@ -93,7 +93,7 @@ function sendUserEmail($data)
 	$subject = 'Thankyou for contacting '.$adminName.' '.$data['name'].'!';
 	$body = '
 			<p>'.$adminName.' will be in contact with you shortly!</p>
-			<p>Call me anytime if you have any questions: <b>'.$adminPhoen.'</b></p>
+			<p>Call me anytime if you have any questions: <b>'.$adminPhone.'</b></p>
 			<p>In the meantime, please search for homes at: '.$adminWebsite.'</p>
 			<p>Thanks,<br />'.$adminName.'</p>';
 
