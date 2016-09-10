@@ -78,7 +78,7 @@ include 'config.php';
 			$('#formError').empty();
 			var baseUrl = document.location.origin;
 
-			$.post(baseUrl, $('form#submitForm').serialize(), function(data){
+			$.post(baseUrl + '/submit.php', $('form#submitForm').serialize(), function(data){
 				if(data.success)
 					$('#formResponse').html(data.message);
 				else
