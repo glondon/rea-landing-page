@@ -26,7 +26,9 @@ include 'config.php';
 		#nameInput, #emailInput, #phoneInput, #formSubmit {padding:10px;margin:3px}
 		#formError {width:400px;list-style:none;display:none}
 		#formResponse {width:400px}
-		#youtube {margin:30px,30px;padding-bottom:15px}
+		#submitForm {padding-top:15px}
+		#youtube {position: relative;padding-bottom: 56.25%;padding-top: 30px; height: 0; overflow: hidden}
+ 		#youtube iframe,#youtube object,#youtube embed {position: absolute;top: 0;left: 0;width: 100%;height: 100%}
 	</style>
 </head>
 <body>
@@ -59,8 +61,8 @@ include 'config.php';
 		<div class="row">
 			<div class="col-md-8">
 				<h2>Call: <a href="tel:<?=$adminPhone?>"><?=$adminPhone?></a></h2>
-				<div id="youtube" class="embed-responsive embed-responsive-16by9">
-					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7U8yqRGP7ak" frameborder="0" allowfullscreen></iframe>
+				<div id="youtube">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/7U8yqRGP7ak" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div id="formResponse"></div>
 				<form class="form-horizontal" action="<?=URL?>submit.php" method="post" id="submitForm" accept-charset="utf-8">
