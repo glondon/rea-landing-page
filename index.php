@@ -18,6 +18,7 @@ include 'config.php';
 	<link rel="canonical" href="<?=URL?>" />
 	<link href="<?=URL?>css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?=URL?>css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="<?=$faviconUrl?>" rel="shortcut icon" type="image/ico">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="<?=URL?>js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?=URL?>js/facebook.js"></script>
