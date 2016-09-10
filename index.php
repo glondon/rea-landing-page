@@ -73,7 +73,27 @@ include 'config.php';
 
 	</div>
 	<script type="text/javascript">
+		$('form#submitForm #formSubmit').click(function(form){
+			form.preventDefault();
+			$('#formError').empty();
+			var baseUrl = document.location.origin;
 
+			$.post(baseUrl, $('form#submitForm').serialize(), function(data){
+				if(data.success)
+					$('#formResponse').html(data.message);
+				else
+				{
+					if(data.nameError != null)
+						$('#formError').append('<li>'+data.nameError+'</li>');
+
+					if(data.emailError != null)
+						$('#formError').append('<li>'+data.emailError+'</li>');
+
+					if(data.phoneError != null)
+						$('#formError').append('<li>'+data.phoneError+'</li>');
+				}
+			}, 'json');
+		});
 	</script>
 </body>
 </html>
