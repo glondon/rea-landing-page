@@ -30,6 +30,7 @@ include 'config.php';
 		#youtube {position: relative;padding-bottom: 56.25%;padding-top: 30px; height: 0; overflow: hidden; max-width:853px;max-height:480px}
  		#youtube iframe,#youtube object,#youtube embed {position: absolute;top: 0;left: 0;width: 100%;height: 100%}
  		#footer {padding:15px}
+ 		.footerMessage {margin-left:-10px}
 	</style>
 </head>
 <body>
@@ -83,7 +84,7 @@ include 'config.php';
 		</div>
 		<div id="footer">
 			<hr />
-			<p style="margin-left:-30px"><small>Copyright &copy; <?=$adminName?> - <?=$year?></small></p>
+			<p class="footerMessage"><small>Copyright &copy; <?=$adminName?> - <?=$year?></small></p>
 		</div>
 	</div>
 	<script type="text/javascript">
