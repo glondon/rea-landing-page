@@ -57,11 +57,12 @@ include 'config.php';
 	<!-- Facebook  End -->
 	<div align="center" class="container">
 		<div class="page-header">
-			<h1>Interested in buying a home in Virginia Beach?</h1>
+			<h2 class="h1">Interested in buying a home in Virginia Beach?</h2>
+			<h6 class="small">Contact <?=$adminName?> to get started today!</h6>
 		</div>
 		<div class="row">
 			<div class="col-md-8">
-				<h2>Call: <a href="tel:<?=$adminPhone?>"><?=$adminPhone?></a></h2>
+				<h3>Call: <a href="tel:<?=$adminPhone?>"><?=$adminPhone?></a></h3>
 				<div id="youtube">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/7U8yqRGP7ak" frameborder="0" allowfullscreen></iframe>
 				</div>
