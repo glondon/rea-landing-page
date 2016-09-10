@@ -33,7 +33,6 @@ include 'config.php';
 	</style>
 </head>
 <body>
-	<!-- Facebook -->
     <script>
       window.fbAsyncInit = function() {
         FB.init({
@@ -50,11 +49,6 @@ include 'config.php';
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
     </script>
-    <!--
-    <fb:login-button scope="public_profile,email" style="margin:15px" onlogin="checkLoginState();" data-auto-logout-link="true"></fb:login-button>
-	<div id="status" style="margin-bottom:10px"></div>
-	-->
-	<!-- Facebook  End -->
 	<div align="center" class="container">
 		<div class="page-header">
 			<h2 class="h1">Interested in buying a home in Virginia Beach?</h2>
@@ -66,6 +60,10 @@ include 'config.php';
 				<div id="youtube">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/7U8yqRGP7ak" frameborder="0" allowfullscreen></iframe>
 				</div>
+				<!--
+    				<fb:login-button scope="public_profile,email" style="margin:15px" onlogin="checkLoginState();" data-auto-logout-link="true"></fb:login-button>
+					<div id="status" style="padding:20px,20px"></div>
+				-->
 				<div id="formResponse"></div>
 				<form class="form-horizontal" action="<?=URL?>submit.php" method="post" id="submitForm" accept-charset="utf-8">
 					<fieldset>
