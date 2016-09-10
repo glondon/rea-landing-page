@@ -12,18 +12,17 @@ function statusChangeCallback(response) {
     FB.api('/me?fields=id,first_name,last_name,email', function(response) {
       //console.log(JSON.stringify(response));
 
-      var contactUrl = document.location.origin + '/contact';
+      var url = document.location.origin;
 
       // auto fill the forms as much as possible....
-      if (contactUrl == document.location.origin + '/contact') {
+      if (url == document.location.origin) {
 
-        $('#firstName').val(response.first_name);
-        $('#lastName').val(response.last_name);
+        $('#name').val(response.first_name);
         $('#email').val(response.email);
 
       } else {
 
-        $('#firstName').val(response.first_name);
+        $('#name').val(response.first_name);
         $('#email').val(response.email);
       }
 
@@ -54,7 +53,7 @@ function checkLoginState() {
 
 window.fbAsyncInit = function() {
   FB.init({
-    appId      : '536283659887288',
+    appId      : '536283659887288', //TODO update addId
     cookie     : true,  
     xfbml      : true,  
     version    : 'v2.5' 
