@@ -94,7 +94,7 @@ function sendUserEmail($data)
 	$body = '
 			<p>'.$adminName.' will be in contact with you shortly!</p>
 			<p>Call me anytime if you have any questions: <b>'.$adminPhone.'</b></p>
-			<p>In the meantime, please search for homes at: '.$adminWebsite.'</p>
+			<p>In the meantime, please search for homes at: <a href="'.$adminWebsite.'" target="_blank">'.$adminWebsite.'</a></p>
 			<p>Thanks,<br />'.$adminName.'</p>';
 
 	mail($toEmail, $subject, $body, $headers);
