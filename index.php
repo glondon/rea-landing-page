@@ -52,7 +52,7 @@ include 'config.php';
     </script>
 	<div align="center" class="container">
 		<div class="page-header">
-			<h2 class="h1">Interested in buying a home in Virginia Beach?</h2>
+			<h2 class="h1">Interested in buying a home in <?=$location?>?</h2>
 			<h6 class="small">Contact <?=$adminName?> to get started today!</h6>
 		</div>
 		<div class="row">
