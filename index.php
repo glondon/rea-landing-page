@@ -67,18 +67,16 @@ include 'config.php';
 
 				<div id="formResponse"></div>
 				<form class="form-horizontal" action="<?=URL?>submit.php" method="post" id="submitForm" accept-charset="utf-8">
-					<fieldset>
-						<div class="col-xs-10">
-							<ul id="formError" class="alert alert-danger"></ul>
-							<input type="text" name="name" id="nameInput" class="form-control" value="Name" onfocus="if (this.value == 'Name') this.value = '';" 
-								onblur="if (this.value == '') this.value = 'Name';" /><br />
-							<input type="text" name="email" id="emailInput" class="form-control" value="Email" onfocus="if (this.value == 'Email') this.value = '';" 
-								onblur="if (this.value == '') this.value = 'Email';" /><br />
-							<input type="text" name="phone" id="phoneInput" class="form-control" value="Phone" onfocus="if (this.value == 'Phone') this.value = '';" 
-								onblur="if (this.value == '') this.value = 'Phone';" /><br />
-							<button type="submit" id="formSubmit" class="btn btn-default btn-sm">Sign Up</button>
-						</div>
-					</fieldset>
+					<div class="col-xs-10">
+						<ul id="formError" class="alert alert-danger"></ul>
+						<input type="text" name="name" id="nameInput" class="form-control" value="Name" onfocus="if (this.value == 'Name') this.value = '';" 
+							onblur="if (this.value == '') this.value = 'Name';" /><br />
+						<input type="text" name="email" id="emailInput" class="form-control" value="Email" onfocus="if (this.value == 'Email') this.value = '';" 
+							onblur="if (this.value == '') this.value = 'Email';" /><br />
+						<input type="text" name="phone" id="phoneInput" class="form-control" value="Phone" onfocus="if (this.value == 'Phone') this.value = '';" 
+							onblur="if (this.value == '') this.value = 'Phone';" /><br />
+						<button type="submit" id="formSubmit" class="btn btn-default btn-sm">Sign Up</button>
+					</div>
 				</form>
 			</div>
 		</div>
