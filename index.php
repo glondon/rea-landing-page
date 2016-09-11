@@ -61,10 +61,10 @@ include 'config.php';
 				<div id="youtube">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/<?=$youtubeUrl?>?autoplay=1" frameborder="0" allowfullscreen></iframe>
 				</div>
-				<!--
-    				<fb:login-button scope="public_profile,email" style="margin:15px" onlogin="checkLoginState();" data-auto-logout-link="true"></fb:login-button>
-					<div id="status" style="padding:20px,20px"></div>
-				-->
+
+				<fb:login-button scope="public_profile,email" style="margin:15px" onlogin="checkLoginState();" data-auto-logout-link="true"></fb:login-button>
+				<div id="status" style="padding:20px,20px"></div>
+				
 				<div id="formResponse"></div>
 				<form class="form-horizontal" action="<?=URL?>submit.php" method="post" id="submitForm" accept-charset="utf-8">
 					<fieldset>
