@@ -53,7 +53,7 @@ function checkLoginState() {
 
 window.fbAsyncInit = function() {
   FB.init({
-    appId      : '536283659887288', //TODO update addId
+    appId      : '333408316997594',
     cookie     : true,  
     xfbml      : true,  
     version    : 'v2.5' 
