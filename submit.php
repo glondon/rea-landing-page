@@ -60,21 +60,21 @@ if(!empty($_POST)){
 
 		echo json_encode($response);
 
-		$data = array('name' => $name, 'email' => $email, 'phone' => $phone);
+		$data = array('name' => $name, 'email' => $email, 'phone' => $phone, 'adminName' => $adminName, 
+					  'adminEmail' => $adminEmail, 'adminPhone' => $adminPhone, 'adminWebsite' => $adminWebsite);
 
-		//sendAdminEmail($data);
-		//sendUserEmail($data);
+		sendAdminEmail($data);
+		sendUserEmail($data);
 	}
 }
 
 function sendAdminEmail($data)
 {
 	$headers = 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-	$headers .= 'From: Admin <'.$adminEmail.'>' . "\r\n";
-	$toEmail = $adminEmail;
-	$subject = 'You have a new lead processed on: ' . date('Y/m/d');
-	$body = '
-			<p>Lead details are below:</p>
+	$headers .= 'From: Admin <'.$data['adminEmail'].'>' . "\r\n";
+	$toEmail = $data['adminEmail'];
+	$subject = 'You have a new lead received on: ' . date('Y/m/d');
+	$body = '<p>Lead details are below:</p>
 			<ul>
 				<li>Name: '.$data['name'].'</li>
 				<li>Email: '.$data['email'].'</li>
@@ -88,14 +88,14 @@ function sendAdminEmail($data)
 function sendUserEmail($data)
 {
 	$headers = 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-	$headers .= 'From: Admin <'.$adminEmail.'>' . "\r\n";
+	$headers .= 'From: '.$data['adminName'].' <'.$data['adminEmail'].'>' . "\r\n";
 	$toEmail = $data['email'];
-	$subject = 'Thankyou for contacting '.$adminName.' '.$data['name'].'!';
+	$subject = 'Thankyou for contacting '.$data['adminName'].' '.$data['name'].'!';
 	$body = '
-			<p>'.$adminName.' will be in contact with you shortly!</p>
-			<p>Call me anytime if you have any questions: <b>'.$adminPhone.'</b></p>
-			<p>In the meantime, please search for homes at: <a href="'.$adminWebsite.'" target="_blank">'.$adminWebsite.'</a></p>
-			<p>Thanks,<br />'.$adminName.'</p>';
+			<p>'.$data['adminName'].' will be in contact with you shortly!</p>
+			<p>Call '.$data['adminName'].' anytime if you have any questions: <b>'.$data['adminPhone'].'</b></p>
+			<p>In the meantime, please search for homes at: <a href="'.$data['adminWebsite'].'" target="_blank">'.$data['adminWebsite'].'</a></p>
+			<p>Thanks,<br />'.$data['adminName'].'</p>';
 
 	mail($toEmail, $subject, $body, $headers);
 }
