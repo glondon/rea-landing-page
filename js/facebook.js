@@ -17,8 +17,8 @@ function statusChangeCallback(response) {
       // auto fill the forms as much as possible....
       if (url == document.location.origin) {
 
-        $('#name').val(response.first_name);
-        $('#email').val(response.email);
+        $('#nameInput').val(response.first_name);
+        $('#emailInput').val(response.email);
 
       } else {
 
