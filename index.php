@@ -31,6 +31,8 @@ include 'config.php';
  		#youtube iframe,#youtube object,#youtube embed {position: absolute;top: 0;left: 0;width: 100%;height: 100%}
  		#footer {padding:15px}
  		.footerMessage {margin-left:-10px}
+ 		.footerImages {list-style:none;width:410px}
+ 		.footerImages li {display:inline;float: left;padding-left:25px}
 	</style>
 </head>
 <body>
@@ -82,6 +84,13 @@ include 'config.php';
 		</div>
 		<div id="footer">
 			<hr />
+			<ul class="footerImages">
+				<li><img src="img/REALTOR.jpg" width="50px" height="50px" /></li>
+				<li><img src="img/Redefy Logo 3.jpg" width="50px" height="50px" /></li>
+				<li><img src="img/brand.gif" width="50px" height="50px" /></li>
+				<li><img src="img/Home.jpg" width="75px" height="75px" /></li>
+			</ul>
+			<br />
 			<p class="footerMessage"><small>Copyright &copy; <?=$adminName?> - <?=$year?></small></p>
 		</div>
 	</div>
