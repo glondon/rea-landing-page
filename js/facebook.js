@@ -2,7 +2,7 @@
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
   //console.log('statusChangeCallback');
-  //console.log(response);
+  console.log(response);
   
   // for FB.getLoginStatus().
   if (response.status === 'connected') {
@@ -10,11 +10,11 @@ function statusChangeCallback(response) {
     //console.log(response.authResponse.accessToken);
 
     FB.api('/me?fields=id,first_name,last_name,email', function(response) {
-      console.log(JSON.stringify(response));
+      //console.log(JSON.stringify(response));
 
       // auto fill the forms as much as possible....
-      $('#nameInput').val(response.first_name);
-      $('#emailInput').val(response.email);
+      document.getElementById('#nameInput').val(response.first_name);
+      document.getElementById('#emailInput').val(response.email);
 
     });
     
