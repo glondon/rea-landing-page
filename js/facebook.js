@@ -10,21 +10,11 @@ function statusChangeCallback(response) {
     //console.log(response.authResponse.accessToken);
 
     FB.api('/me?fields=id,first_name,last_name,email', function(response) {
-      //console.log(JSON.stringify(response));
-
-      var url = document.location.origin;
+      console.log(JSON.stringify(response));
 
       // auto fill the forms as much as possible....
-      if (url == document.location.origin) {
-
-        $('#nameInput').val(response.first_name);
-        $('#emailInput').val(response.email);
-
-      } else {
-
-        $('#name').val(response.first_name);
-        $('#email').val(response.email);
-      }
+      $('#nameInput').val(response.first_name);
+      $('#emailInput').val(response.email);
 
     });
     
