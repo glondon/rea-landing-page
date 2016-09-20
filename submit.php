@@ -70,9 +70,6 @@ if(!empty($_POST)){
 
 function sendAdminEmail($data)
 {
-	$headers = 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-	$headers .= 'From: Admin <'.$data['adminEmail'].'>' . "\r\n";
-	$toEmail = $data['adminEmail'];
 	$subject = 'You have a new lead received on: ' . date('Y/m/d');
 	$body = '<p>Lead details are below:</p>
 			<ul>
@@ -82,7 +79,7 @@ function sendAdminEmail($data)
 			</ul>
 			<p>Contact them ASAP!!!</p>';
 
-	mail($toEmail, $subject, $body, $headers);
+	mail($data['adminEmail'], $subject, $body, 'Content-type: text/html; charset=iso-8859-1' . "\r\n" . 'From Admin <'.$data['adminEmail'].'>' . "\r\n");
 }
 
 function sendUserEmail($data)
