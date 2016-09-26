@@ -79,7 +79,7 @@ function sendAdminEmail($data)
 			</ul>
 			<p>Contact them ASAP!!!</p>';
 
-	mail($data['adminEmail'], $subject, $body, 'Content-type: text/html; charset=iso-8859-1' . "\r\n" . 'From Admin <'.$data['adminEmail'].'>' . "\r\n");
+	mail($data['adminEmail'], $subject, $body, 'Content-type: text/html; charset=iso-8859-1' . "\r\n" . 'From: Admin <'.$data['adminEmail'].'>' . "\r\n");
 }
 
 function sendUserEmail($data)
