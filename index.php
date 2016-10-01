@@ -24,6 +24,7 @@ include 'config.php';
 	<script type="text/javascript" src="<?=URL?>js/facebook.js"></script>
 	<style>
 		body {margin:0px} 
+		h2, h6 {color:#fff}
 		#nameInput, #emailInput, #phoneInput, #formSubmit {padding:10px;margin:3px}
 		#formError {margin-left:-3px;list-style:none;display:none;max-width:400px}
 		#submitForm {padding-top:15px}
@@ -37,6 +38,7 @@ include 'config.php';
  		#bg {position:fixed;top:0;left:0;min-width:100%;min-height:100%}
  		#opacity {filter:alpha(opacity=99);opacity:0.99}
  		.phone {color:#fff}
+ 		.phone a:hover {text-decoration:none}
 	</style>
 </head>
 <body>
