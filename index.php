@@ -39,6 +39,9 @@ include 'config.php';
  		#opacity {filter:alpha(opacity=99);opacity:0.99}
  		.phone {color:#fff}
  		.phone a:hover {text-decoration:none}
+ 		@media (max-width: 767px) {
+ 			.mobileFix {clear:left;padding-top: 25px;width: 200px}
+ 		}
 	</style>
 </head>
 <body>
@@ -98,7 +101,9 @@ include 'config.php';
 				<li><img src="img/Home.jpg" width="75px" height="75px" /></li>
 			</ul>
 			<br />
-			<p class="footerMessage"><small>Copyright &copy; <?=$adminName?> - <?=$year?></small></p>
+			<div class="mobileFix">
+				<p class="footerMessage"><small>Copyright &copy; <?=$adminName?> - <?=$year?></small></p>
+			</div>
 		</div>
 	</div>
 	<script type="text/javascript">
