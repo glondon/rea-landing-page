@@ -23,6 +23,7 @@ include 'config.php';
 	<script src="<?=URL?>js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?=URL?>js/facebook.js"></script>
 	<style>
+		body {margin:0px} 
 		#nameInput, #emailInput, #phoneInput, #formSubmit {padding:10px;margin:3px}
 		#formError {margin-left:-3px;list-style:none;display:none;max-width:400px}
 		#submitForm {padding-top:15px}
@@ -30,9 +31,12 @@ include 'config.php';
 		#youtube {position: relative;padding-bottom: 56.25%;padding-top: 30px; height: 0; overflow: hidden; max-width:853px;max-height:480px}
  		#youtube iframe,#youtube object,#youtube embed {position: absolute;top: 0;left: 0;width: 100%;height: 100%}
  		#footer {padding:15px}
- 		.footerMessage {margin-left:-10px}
+ 		.footerMessage {margin-left:-10px;color:#fff}
  		.footerImages {list-style:none;width:410px}
  		.footerImages li {display:inline;float: left;padding-left:25px}
+ 		#bg {position:fixed;top:0;left:0;min-width:100%;min-height:100%}
+ 		#opacity {filter:alpha(opacity=99);opacity:0.99}
+ 		.phone {color:#fff}
 	</style>
 </head>
 <body>
@@ -52,14 +56,15 @@ include 'config.php';
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
     </script>
-	<div align="center" class="container">
+    <img id="bg" src="img/house-background.jpg" alt=""/>
+	<div align="center" class="container" id="opacity">
 		<div class="page-header">
 			<h2 class="h1">Interested in buying a home in <?=$location?>?</h2>
 			<h6 class="small">Contact <?=$adminName?> to get started today!</h6>
 		</div>
 		<div class="row">
 			<div class="col-md-8">
-				<h3>Call: <a href="tel:<?=$adminPhone?>"><?=$adminPhone?></a></h3>
+				<h3 class="phone">Call: <a class="phone" href="tel:<?=$adminPhone?>"><?=$adminPhone?></a></h3>
 				<div id="youtube">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/<?=$youtubeUrl?>?autoplay=1" frameborder="0" allowfullscreen></iframe>
 				</div>
