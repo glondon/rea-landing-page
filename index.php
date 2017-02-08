@@ -96,9 +96,9 @@ include 'config.php';
 			<hr />
 			<ul class="footerImages">
 				<li><img src="img/REALTOR.jpg" width="50px" height="50px" /></li>
-				<li><img src="img/Redefy Logo 3.jpg" width="50px" height="50px" /></li>
+				<li><img src="img/town_real_estate_group_logo.png" width="75px" height="50px" /></li>
 				<li><img src="img/brand.gif" width="50px" height="50px" /></li>
-				<li><img src="img/Home.jpg" width="75px" height="75px" /></li>
+				<li><img src="img/Home.jpg" width="75px" height="50px" /></li>
 			</ul>
 			<br />
 			<div class="mobileFix">
